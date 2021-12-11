@@ -33,7 +33,7 @@ void app_main(void) {
     ESP_LOGI(TAG, "new partition data start: %u, end: %u, size: %u",
              (uint32_t)start, (uint32_t)end, size);
 
-    err = spi_flash_read(base_addr, buf, size); 
+    err = spi_flash_read(base_addr, buf, size);
     if (err != ESP_OK) {
         ESP_LOGE(TAG, "spi_flash_read failed, %s", esp_err_to_name(err));
     }
@@ -69,3 +69,4 @@ void app_main(void) {
         esp_restart();
     }
 }
+
